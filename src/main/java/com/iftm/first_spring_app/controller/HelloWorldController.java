@@ -12,11 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class HelloWorldController {
 
+    @Autowired
     private HelloWorldService helloWorldService;
-
-    public HelloWorldController(HelloWorldService helloWorldService) {
-        this.helloWorldService = helloWorldService;
-    }
 
     @GetMapping
     public String helloWorld() {
